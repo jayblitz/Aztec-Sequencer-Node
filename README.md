@@ -1,5 +1,6 @@
 # AZTEC-SEQUENCER NODE
-Details Guide on how to  Run `Sequencer Node` on Aztec Network, Earn `Apprentice` Role on discord and Produce blocks on the network.
+Aztec is a L2 protcol on Ethereum that provides privacy and enable private transanction onchain.
+Details Guide on how to  Run `Sequencer Node` on Aztec Network Testnet, Earn `Apprentice` Role on discord and Produce blocks on the network.
 
 * **What does sequencer nodes does  in the testnet?**
   * `Sequencer Nodes` proposes blocks, validates blocks from others, and votes on upgrades.
@@ -127,7 +128,7 @@ After entering the command, your node starts running, It takes a few hours for y
 Go to the discord channel :https://discord.com/channels/1144692727120937080/1367196595866828982 . Get the below details before you use the commands
 
 **Open a New terminal and run the below command without shutting your Node**
-**Step 1: Get the latest proven block number:**
+*Step 1: Get the latest proven block number:*
 ```bash
 curl -s -X POST -H 'Content-Type: application/json' \
 -d '{"jsonrpc":"2.0","method":"node_getL2Tips","params":[],"id":67}' \
@@ -172,7 +173,8 @@ Replace `RPC_URL`, `your-validator-address` & 2x `your-validator-address`, then 
 ---
 
 # You will get this:
- ```Adding validator (xxxxxx83d3442508ad63f3afa7f4e874xxxx, xxxxxd3442508ad63f3afa7f4e874b78269xxxx [forwarder: 0x871e7294B54dA07cFd71A95b6e2E66d86BcE41f8]) to rollup 0x8D1cc702453fa889f137DBD5734CDb7Ee96B6Ba0
+ ```bash
+Adding validator (xxxxxx83d3442508ad63f3afa7f4e874xxxx, xxxxxd3442508ad63f3afa7f4e874b78269xxxx [forwarder: 0x871e7294B54dA07cFd71A95b6e2E66d86BcE41f8]) to rollup 0x8D1cc702453fa889f137DBD5734CDb7Ee96B6Ba0
 [06:34:36.706] INFO: cli Adding validator (xxxx3d3442508ad63f3afa7f4e874b7826xxxxx, xxxx3d3442508ad63f3afa7f4e874b782xxxx [forwarder: 0x871e7294B54dA07cFd71A95b6e2E66d86BcE41f8]) to rollup 0x8D1cc702453fa889f137DBD5734CDb7Ee96B6Ba0
 Transaction hash: xxx066cfd1d3a0ec29adfe3fe4ac0b11fb91bfbe049f268179eb9xxxxx
 [06:34:37.864] INFO: cli Transaction hash: xxxx66cfd1d3a0ec29adfe3fe4ac0b11fb91bfbe049f268179eb9ee9def27xxx```
