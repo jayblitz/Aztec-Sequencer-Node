@@ -177,26 +177,49 @@ Replace `RPC_URL`, `your-validator-address` & 2x `your-validator-address`, then 
 Adding validator (xxxxxx83d3442508ad63f3afa7f4e874xxxx, xxxxxd3442508ad63f3afa7f4e874b78269xxxx [forwarder: 0x871e7294B54dA07cFd71A95b6e2E66d86BcE41f8]) to rollup 0x8D1cc702453fa889f137DBD5734CDb7Ee96B6Ba0
 [06:34:36.706] INFO: cli Adding validator (xxxx3d3442508ad63f3afa7f4e874b7826xxxxx, xxxx3d3442508ad63f3afa7f4e874b782xxxx [forwarder: 0x871e7294B54dA07cFd71A95b6e2E66d86BcE41f8]) to rollup 0x8D1cc702453fa889f137DBD5734CDb7Ee96B6Ba0
 Transaction hash: xxx066cfd1d3a0ec29adfe3fe4ac0b11fb91bfbe049f268179eb9xxxxx
-[06:34:37.864] INFO: cli Transaction hash: xxxx66cfd1d3a0ec29adfe3fe4ac0b11fb91bfbe049f268179eb9ee9def27xxx```
+[06:34:37.864] INFO: cli Transaction hash: xxxx66cfd1d3a0ec29adfe3fe4ac0b11fb91bfbe049f268179eb9ee9def27xxx
+```
 
 * check sepolia scan to see if the validators goes through
 `https://sepolia.etherscan.io/`
  
 ![alt text](image.png)
 
-**TROUBLESHOOTING**:
-**world_state error** can be solve by removing the world_state folder
-*error registering validator is due to chain not sync to th current tip*
-*invalid blocknumber is caused from the public consesus address (BEACON ADDR), get a new one*
+# TROUBLESHOOTING:
+* world_state error :can be solve by removing the world_state folder
+
+* error registering  validator : is due to chain not sync to th current tip
+  
+* invalid blocknumber is caused from the public consesus address (BEACON ADDR), get a new one
 
 
-
+# If there is need to update the Node
+* Stop node with
+```bash
+  Ctrl+C
+```
+* update the node
+```bash
+aztec-up <new node version>
+```
+# If you need to delete the node 
 * Stop node with Ctrl+C.
 * Delete node data:
 ```bash
-rm -r /root/.aztec/alpha-testnet 
+rm -r /root/.aztec
 ```
+# If you need to restart the node 
 * Re-run the node using start command.
+* * Start the Node
+```
+aztec start --node --archiver --sequencer \
+  --network alpha-testnet \
+  --l1-rpc-urls RPC_URL  \
+  --l1-consensus-host-urls BEACON_URL \
+  --sequencer.validatorPrivateKey 0xYourPrivateKey \
+  --sequencer.coinbase 0xYourAddress \
+  --p2p.p2pIp IP
+```
 
 This Readme will keep getting update here and on my X https://x.com/HallenjayArt
 
