@@ -91,13 +91,13 @@ curl ipv4.icanhazip.com
 ## 8. Enable Firewall & Open Ports
 ```console
 # Firewall
-ufw allow ssh
-ufw enable
+sudo ufw allow ssh
+sudo ufw enable
 
 # Sequencer
-ufw allow 40400
-ufw allow 40500
-ufw allow 8080
+sudo ufw allow 40400
+sudo ufw allow 40500
+sudo ufw allow 8080
 ```
 
 ## 9. Sequencer Node
@@ -118,8 +118,8 @@ aztec start --node --archiver --sequencer \
 ```
 Replace the following variables before you Run Node:
 * `RPC_URL` & `BEACON_URL`: Step 4
-* `0xYourPrivateKey`: Your EVM wallet private key
-* `0xYourAddress`: Your EVM wallet public address
+* `YourPrivateKey`: Your EVM wallet private key
+* `YourAddress`: Your EVM wallet public address
 * `IP`: Your server IP (Step 7)
 
 ## 10. Sync Node
