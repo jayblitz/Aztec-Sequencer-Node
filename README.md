@@ -68,7 +68,7 @@ aztec
 
 ## 3. Update Aztec to the latest version
 ```bash
-aztec-up 0.85.0-alpha-testnet.5
+aztec-up alpha-testnet
 ```
 
 ## 4. Obtain RPC URLs
@@ -91,7 +91,6 @@ curl ipv4.icanhazip.com
 ## 8. Enable Firewall & Open Ports
 ```console
 # Firewall
-ufw allow 22
 ufw allow ssh
 ufw enable
 
@@ -193,7 +192,9 @@ Transaction hash: xxx066cfd1d3a0ec29adfe3fe4ac0b11fb91bfbe049f268179eb9xxxxx
 * error registering  validator : is due to chain not sync to th current tip
   
 * invalid blocknumber is caused from the public consesus address (BEACON ADDR), get a new one
-
+* archiver error can be cleared by removing the archiver folder cause its mostly happen due to corrupt archive due to network instability
+* the data directory is at /home/aztec-data/ and this is where you will find all folders that need to be deleted once they get corrupted
+* Unable to fetch blob for upto 5hours will mostly be the issue of your consensus url, the public ones are rate limit and not able to retrieve blob for a long time, solution is to get a private one
 
 # If there is need to update the Node
 * Stop node with
@@ -202,7 +203,7 @@ Transaction hash: xxx066cfd1d3a0ec29adfe3fe4ac0b11fb91bfbe049f268179eb9xxxxx
 ```
 * update the node
 ```bash
-aztec-up <new node version>
+aztec-up alpha-testnet
 ```
 # If you need to delete the node 
 * Stop node with Ctrl+C.
@@ -212,7 +213,6 @@ rm -r /root/.aztec
 ```
 # If you need to restart the node 
 * Re-run the node using start command.
-* * Start the Node
 ```
 aztec start --node --archiver --sequencer \
   --network alpha-testnet \
