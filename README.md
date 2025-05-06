@@ -125,7 +125,7 @@ Replace the following variables before you Run Node:
 After entering the command, your node starts running, It takes a few hours for your node to get sync to the tip of the block and mostly depend on how powerful your device is.
 
 ## 11. Geting Apprentice Role on Aztec Discord
-Go to the discord channel :https://discord.com/channels/1144692727120937080/1367196595866828982 . Get the below details before you use the commands
+Go to the discord channel :https://discord.com/channels/1144692727120937080/1367196595866828982. Get the below details before you use the commands
 
 **Open a New terminal and run the below command without shutting your Node**
 *Step 1: Get the latest proven block number:*
@@ -157,7 +157,7 @@ http://localhost:8080 | jq -r ".result"
 
 * After submission, you'll get your `Apprentice` Role
 
-![alt text](image-1.png)
+
 ## 12. Register Validator once your Node is sync to the tip
 ```bash
 aztec add-l1-validator \
@@ -183,7 +183,6 @@ Transaction hash: xxx066cfd1d3a0ec29adfe3fe4ac0b11fb91bfbe049f268179eb9xxxxx
 * check sepolia scan to see if the validators goes through
 `https://sepolia.etherscan.io/`
  
-![alt text](image.png)
 
 # TROUBLESHOOTING:
 * world_state error :can be solve by removing the world_state folder
@@ -222,6 +221,6 @@ aztec start --node --archiver --sequencer \
   --p2p.p2pIp IP
 ```
 
-This Readme will keep getting update here and on my X https://x.com/edemblinks
+This Readme will keep getting updated here and on my X https://x.com/edemblinks
 
 
